@@ -1,9 +1,9 @@
 *.*~
 .*~
-bin/
-target/
-logs/
-repository/
+play2dataR/bin/
+play2dataR/target/
+play2dataR/logs/
+play2dataR/repository/
 *.lock
 *.komodoproject
 .DS_Store
