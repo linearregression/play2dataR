@@ -1,6 +1,6 @@
-resolvers += "Typesafe repository" at "http://repo.typesafe.com/typesafe/releases/"
+resolvers += Resolver.url("Typesafe repository", url("http://repo.typesafe.com/typesafe/releases/"))
 
-resolvers += "Typesafe repository mwn" at "http://repo.typesafe.com/typesafe/maven-releases/" 
+resolvers += Resolver.url("Typesafe repository mwn", url("http://repo.typesafe.com/typesafe/maven-releases/" )).(Resolver.ivyStylePatterns)
 
 // The Play plugin
 addSbtPlugin("com.typesafe.play" % "sbt-plugin" % "2.3.7")
