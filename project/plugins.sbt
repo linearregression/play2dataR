@@ -1,4 +1,4 @@
-resolvers += Resolver.url("Typesafe repository", url("http://repo.typesafe.com/typesafe/releases/"))
+resolvers += "Typesafe repository" at "http://repo.typesafe.com/typesafe/releases/"
 
 resolvers += "Typesafe repository mwn" at "http://repo.typesafe.com/typesafe/maven-releases/"
 
