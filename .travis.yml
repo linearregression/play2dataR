@@ -14,9 +14,7 @@ before_install:
   - sudo apt-get update -qq
 
 before_script: 
-  - wget -v http://downloads.typesafe.com/typesafe-activator/$ACTIVATORVER/typesafe-activator-$ACTIVATORVER-minimal.zip
-  - unzip -q typesafe-activator-$ACTIVATORVER-minimal.zip
-  - cp -rf activator-$ACTIVATORVER-minimal/* . && rm -rf activator-$ACTIVATORVER-minimal
+  - "download.sh"
 
 script:
   - ./activator compile
