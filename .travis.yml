@@ -4,14 +4,15 @@ branches:
     - master
     - release
 env:
-  - ACTIVATOR_VERSION=1.2.12
+  global:
+    - ACTIVATOR_VERSION=1.2.12
 
 scala:
   - 2.11.1
 before_install:
   - sudo apt-get update -qq
 before_script: 
-  - wget http://downloads.typesafe.com/typesafe-activator/${ACTIVATOR_VERSION}/typesafe-activator-${ACTIVATOR_VERSION}-minimal.zip
+  - wget -v http://downloads.typesafe.com/typesafe-activator/${ACTIVATOR_VERSION}/typesafe-activator-${ACTIVATOR_VERSION}-minimal.zip
   - unzip -q typesafe-activator-${ACTIVATOR_VERSION}-minimal.zip
 script:
   - sbt ++$TRAVIS_SCALA_VERSION scoverage:test coveralls
