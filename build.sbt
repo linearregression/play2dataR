@@ -41,5 +41,6 @@ licenses += ("Apache-2.0", url("http://www.apache.org/licenses/LICENSE-2.0.html"
 resolvers ++= Seq(
   Resolver.sbtPluginRepo("releases"),
   Resolver.sonatypeRepo("releases"),
-  Resolver.typesafeRepo("releases")
+  Resolver.typesafeRepo("releases"),
+  Resolver.typesafeIvyRepo("releases")
 )
