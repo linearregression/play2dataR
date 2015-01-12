@@ -17,7 +17,7 @@ before_script:
   - "scripts/download.sh"
 
 script:
-  - ./activator compile
+  - "activator compile"
 
 jdk:
   - oraclejdk7
