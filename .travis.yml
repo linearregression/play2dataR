@@ -14,7 +14,7 @@ before_install:
   - sudo apt-get update -qq
 
 before_script: 
-  - "./download.sh"
+  - "scripts/download.sh"
 
 script:
   - ./activator compile
