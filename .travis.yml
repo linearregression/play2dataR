@@ -1,28 +1,31 @@
 language: scala
+
 branches:
   only:
     - master
-//    - release
+
 env:
-  global:
-//    - ACTIVATOR_VERSION=1.2.12
 
 scala:
   - 2.11.1
+
 before_install:
   - sudo apt-get update -qq
+
 before_script: 
   - export ACTIVATOR_VERSION=1.2.12
   - wget -v http://downloads.typesafe.com/typesafe-activator/${ACTIVATOR_VERSION}/typesafe-activator-${ACTIVATOR_VERSION}-minimal.zip
   - unzip -q typesafe-activator-${ACTIVATOR_VERSION}-minimal.zip
   - cp -rf activator-${ACTIVATOR_VERSION}-minimal/*.* .
   - export PATH=`pwd`/$PATH
+
 script:
-  //- activator ++$TRAVIS_SCALA_VERSION scoverage:test coveralls
   -activator compile
+
 jdk:
   - oraclejdk7
   - oraclejdk8
+
 notifications:
   email:
     - edwardt.tril@gmail.com
