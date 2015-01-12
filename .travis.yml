@@ -5,7 +5,7 @@ branches:
     - master
 
 env:
-  - ACTIVATORVER=1.2.12
+  - "ACTIVATORVER=1.2.12"
 
 scala:
   - 2.11.1
