@@ -5,7 +5,7 @@ branches:
     - master
 
 env:
-  - "ACTIVATORVER=1.2.12"
+  - ACTIVATORVER=1.2.12
 
 scala:
   - 2.11.1
@@ -14,9 +14,9 @@ before_install:
   - sudo apt-get update -qq
 
 before_script: 
-  - wget -v http://downloads.typesafe.com/typesafe-activator/${ACTIVATORVER}/typesafe-activator-${ACTIVATORVER}-minimal.zip
-  - unzip -q typesafe-activator-${ACTIVATORVER}-minimal.zip
-  - cp -rf activator-${ACTIVATORVER}-minimal/*.* . && rm -rf activator-${ACTIVATORVER}-minimal
+  - wget -v http://downloads.typesafe.com/typesafe-activator/$ACTIVATORVER/typesafe-activator-$ACTIVATORVER-minimal.zip
+  - unzip -q typesafe-activator-$ACTIVATORVER-minimal.zip
+  - cp -rf activator-$ACTIVATORVER-minimal/*.* . && rm -rf activator-${ACTIVATORVER}-minimal
 
 script:
   - ./activator compile
