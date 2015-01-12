@@ -1,11 +1,24 @@
 language: scala
-scala:
-  - 2.10.4
+branches:
+  only:
+    - master
+    - release
+env:
   - 2.11.1
+scala:
+  - 2.11.1
+before_install:
+  - sudo apt-get update -qq
+before_script: 
+  - wget http://download.playframework.org/releases/play-${PLAY_VERSION}.zip
+  - unzip -q play-${PLAY_VERSION}.zip 
 script:
   - sbt ++$TRAVIS_SCALA_VERSION scoverage:test coveralls
+after_success:
+after_failure:
 jdk:
   - oraclejdk7
+  - oraclejdk8
 notifications:
   email:
-    - youremail@gmail.com
+    - edwardt.tril@gmail.com
