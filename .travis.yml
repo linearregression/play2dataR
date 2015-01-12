@@ -22,7 +22,7 @@ install:
   - unzip -oq ${ACTIVATOR_ZIP_FILE}
 
 script:
-  - "cd $TRAVIS_BUILD_DIR/code && ${ACTIVATOR_BIN} compile"
+  - "cd $TRAVIS_BUILD_DIR && ${ACTIVATOR_BIN} compile"
 
 jdk:
   - oraclejdk7
