@@ -6,6 +6,10 @@ branches:
 
 env:
   - ACTIVATORVER=1.2.12
+  - ACTIVATOR_VERSION=1.2.12 \
+    ACTIVATOR_ZIP_FILE=typesafe-activator-${ACTIVATOR_VERSION}-minimal.zip \
+    ACTIVATOR_ZIP_URL=http://downloads.typesafe.com/typesafe-activator/${ACTIVATOR_VERSION}/${ACTIVATOR_ZIP_FILE} \
+    ACTIVATOR_BIN=${TRAVIS_BUILD_DIR}/activator-${ACTIVATOR_VERSION}-minimal/activator
 
 scala:
   - 2.11.1
@@ -13,16 +17,16 @@ scala:
 before_install:
   - sudo apt-get update -qq
 
-before_script: 
-  - "scripts/download.sh"
+install:
+  - wget -v ${ACTIVATOR_ZIP_URL}
+  - unzip -oq ${ACTIVATOR_ZIP_FILE}
 
 script:
-  - "activator compile"
+  - "cd $TRAVIS_BUILD_DIR/code && ${ACTIVATOR_BIN} compile"
 
 jdk:
   - oraclejdk7
   - oraclejdk8
 
 notifications:
-  email:
-    - edwardt.tril@gmail.com
+  email: false
