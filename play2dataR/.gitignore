@@ -1,10 +1,14 @@
+*.class
+*.log
 logs
 project/project
 project/target
-target
+target/
 tmp
 .history
-dist
+.cache/
+.lib/
+dist/*
 /.idea
 /*.iml
 /out
@@ -13,3 +17,6 @@ dist
 /.project
 /RUNNING_PID
 /.settings
+# Scala-IDE specific
+.scala_dependencies
+.worksheet
