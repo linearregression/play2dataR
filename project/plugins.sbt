@@ -4,7 +4,10 @@ resolvers += "Typesafe repository mwn" at "http://repo.typesafe.com/typesafe/mav
 
 addSbtPlugin("com.typesafe.play" % "sbt-plugin" % "2.3.7")
 
-// AWS S3 for build push
+// AWS Cloudformation
+addSbtPlugin("com.github.tptodorov" % "sbt-cloudformation" % "0.2.0")
+
+resolvers += "SBT release"  at "http://scalasbt.artifactoryonline.com/scalasbt/sbt-plugin-releases/"
 
 
 // Code Analysis 

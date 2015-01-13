@@ -1,3 +1,7 @@
+import com.github.tptodorov.sbt.cloudformation.CloudFormation
+import com.github.tptodorov.sbt.cloudformation.Import.Keys._
+import com.github.tptodorov.sbt.cloudformation.Import.Configurations._
+
 name := """play2dataR"""
 
 organization := """org.play2dataR"""
