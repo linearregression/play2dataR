@@ -1,5 +1,8 @@
 language: scala
 
+scala:
+  - 2.11.1
+
 branches:
   only:
     - master
@@ -11,9 +14,6 @@ env:
     ACTIVATOR_ZIP_URL=http://downloads.typesafe.com/typesafe-activator/${ACTIVATOR_VERSION}/${ACTIVATOR_ZIP_FILE} \
     ACTIVATOR_BIN=${TRAVIS_BUILD_DIR}/activator-${ACTIVATOR_VERSION}-minimal/activator
 
-scala:
-  - 2.11.1
-
 before_install:
   - sudo apt-get update -qq
 
@@ -22,8 +22,8 @@ install:
   - unzip -oq ${ACTIVATOR_ZIP_FILE}
 
 script:
-  #- "cd $TRAVIS_BUILD_DIR && ${ACTIVATOR_BIN} compile"
   - "cd $TRAVIS_BUILD_DIR"
+  - "sbt ++$TRAVIS_SCALA_VERSION scalastyle"
   - "sbt ++$TRAVIS_SCALA_VERSION test"
   - "sbt ++$TRAVIS_SCALA_VERSION publish-local"
 
