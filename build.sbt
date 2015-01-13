@@ -1,5 +1,7 @@
 name := """play2dataR"""
 
+organization := """org.play2dataR"""
+
 version := "1.0-SNAPSHOT"
 
 lazy val root = (project in file(".")).enablePlugins(PlayScala)

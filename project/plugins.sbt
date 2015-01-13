@@ -4,6 +4,15 @@ resolvers += "Typesafe repository mwn" at "http://repo.typesafe.com/typesafe/mav
 
 addSbtPlugin("com.typesafe.play" % "sbt-plugin" % "2.3.7")
 
+// AWS S3 for build push
+
+
+// Code Analysis 
+
+addSbtPlugin("org.scalastyle" %% "scalastyle-sbt-plugin" % "0.6.0")
+
+resolvers += "sonatype-releases" at "https://oss.sonatype.org/content/repositories/releases/"
+
 // web plugins
 
 addSbtPlugin("com.typesafe.sbt" % "sbt-coffeescript" % "1.0.0")

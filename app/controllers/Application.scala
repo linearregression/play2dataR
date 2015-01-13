@@ -10,3 +10,4 @@ object Application extends Controller {
   }
 
 }
+
